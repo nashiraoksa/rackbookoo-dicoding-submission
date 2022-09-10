@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rack Bookoo</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <div class="head_bar_title">
+        <h1 class>Rack Bookoo</h1>
+      </div>
+
+      <div id="inputUser">
+        <h2>Selamat datang di Rack Bookoo!</h2>
+        <form id="user">
+          <div class="input">
+            <label for="inputNama">Nama Anda:</label><br />
+            <input id="inputNama" type="text" placeholder="Nama anda" required />
+          </div>
+          <button id="userSubmit" type="submit">Save</button>
+        </form>
+      </div>
+
+      <div id="jumbotron" class="jumbotron" hidden>
+        <h1 id="welcomeUser"></h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="input_section">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputTitle">Judul</label>
+            <input id="inputTitle" type="text" placeholder="Judul buku" required />
+          </div>
+          <div class="input">
+            <label for="inputAuthor">Penulis</label>
+            <input id="inputAuthor" type="text" placeholder="Penulis buku" required />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun</label>
+            <input id="inputBookYear" type="number" placeholder="Tahun terbit" required />
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="submit">Masukkan Buku ke rak</button>
+        </form>
+      </section>
+
+      <section class="search_section">
+        <h2>Cari Buku</h2>
+        <form id="searchBook">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" placeholder="Judul buku" />
+          <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+        <div id="foundBookList"></div>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList" class="book_list"></div>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookshelfList" class="book_list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&#169; Created by Nashira Oksani Ardine Santosa</p>
+      <br />
+      <hr />
+      <br /><br />
+      <p style="width: 500px; margin: auto">
+        <strong>Rack Bookoo</strong> adalah aplikasi pengelolaan buku berbasis web yang dibuat menggunakan DOM dan Web Storage guna memenuhi submission project pada kelas Dicoding Belajar Membuat Front-End Web untuk Pemula.
+      </p>
+      <br /><br />
+      <hr />
+      <br />
+    </footer>
+
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
